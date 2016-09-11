@@ -1,0 +1,62 @@
+<nav class="ui attached menu">
+    <div class="ui container">
+        <div class="header item">
+            <h1><i class="checkmark box icon"></i> {{ title }}</h1>
+        </div>
+    </div>
+</nav>
+
+<div class="ui text container">
+    <div class="ui segment form">
+        <div class="ui fluid action input">
+            <input type="text" name="title" placeholder="Что нужно сделать?" (keyup.enter) = "addToDo(titleInput)" #titleInput>
+            <button type="button" class="ui primary button" (click)="addToDo(titleInput)">Добавить</button>
+        </div>
+    </div>
+
+    <todo-list [todos]="todos"></todo-list>
+
+</div>
+
+<!--<div class="container">-->
+    <!--<div class="top-form clearfix">-->
+        <!--<a href="#" id="newWinner">{{title}}</a>-->
+        <!--<p>Winners: <span id="winner"></span></p>-->
+    <!--</div>-->
+    <!--<div class="registration-form">-->
+        <!--<h1>Registration form</h1>-->
+        <!--<form action="" class="clearfix">-->
+            <!--<div>-->
+                <!--<p>name: </p>-->
+                <!--<input type="text" id="name" >-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Surname: </p>-->
+                <!--<input type="text" id="surname" >-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Email: </p>-->
+                <!--<input type="text" id="email">-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<p>Phone: </p>-->
+                <!--<input type="text" id="phone">-->
+            <!--</div>-->
+            <!--<div class="submit">-->
+                <!--<input type="submit" value="Save" id="save">-->
+            <!--</div>-->
+        <!--</form>-->
+
+    <!--</div>-->
+    <!--<table class="output-info">-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<td>Name</td>-->
+            <!--<td>Surname</td>-->
+            <!--<td>Email</td>-->
+            <!--<td>Phone</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="tbody"></tbody>-->
+    <!--</table>-->
+<!--</div>-->

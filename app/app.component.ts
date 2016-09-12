@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { TodoListComponent } from './todo/todo-list.component';
+import { TodoFormComponent } from './todo/todo-form.component';
 import { Todo } from './todo/todo';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app/app.component.html',
     styleUrls: ['./app/app.component.css'],
-    directives: [TodoListComponent]
+    directives: [TodoListComponent, TodoFormComponent]
 })
 export class AppComponent {
     title: string;
@@ -17,9 +18,7 @@ export class AppComponent {
         this.todos = []
     }
 
-    addToDo(input: HTMLInputElement) {
-        let title = input.value;
-        this.todos.push(new Todo(title));
-        input.value = '';
+    onTodoAdded(todo: Todo) {
+        this.todos.push(todo);
     }
 }

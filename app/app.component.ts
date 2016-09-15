@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TodoFormComponent } from './components/todo-form/todo-form.component';
-import {TodoService} from "./shared/todo.service";
+
+import { TodosComponent } from './components/todos/todos.component';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app/app.component.html',
-    styleUrls: ['./app/app.component.css'],
-    directives: [TodoListComponent, TodoFormComponent],
-    providers: [TodoService]
+    styleUrls: ['./app/app.component.css']
 })
 
 export class AppComponent {
